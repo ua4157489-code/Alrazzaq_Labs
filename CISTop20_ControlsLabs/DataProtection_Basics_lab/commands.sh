@@ -1,27 +1,35 @@
-
----
-
-# commands.sh
-
-```bash
 #!/bin/bash
 
-# ==================================================
+# =====================================================
 # Lab 13: Data Protection Basics
-# Encryption and Secure Communication Commands
-# ==================================================
+# Encryption & Secure Communication Commands
+# =====================================================
 
 
-echo "Starting Data Protection Configuration"
+echo "Starting Data Protection Commands"
 
 
 
-# --------------------------------------------------
-# Generate SSL/TLS Certificate
-#
-# Purpose:
-# Create a self-signed certificate for HTTPS.
-# --------------------------------------------------
+# =====================================================
+# 1. File Encryption Using AES-256
+# =====================================================
+
+# Install 7-Zip
+
+sudo apt install p7zip-full -y
+
+
+# Encrypt a file using AES-256
+
+7z a -t7z encrypted_file.7z file.txt -pStrongPassword -mhe=on
+
+
+
+# =====================================================
+# 2. Generate SSL/TLS Certificate
+# =====================================================
+
+# Create self-signed certificate for HTTPS
 
 openssl req -x509 -nodes -days 365 \
 -newkey rsa:2048 \
@@ -30,25 +38,57 @@ openssl req -x509 -nodes -days 365 \
 
 
 
-# --------------------------------------------------
-# Install SSH Server
-#
-# Purpose:
-# Enable secure remote administration.
-# --------------------------------------------------
+# Verify certificate details
 
-sudo apt update
+openssl x509 -in server.crt -text -noout
+
+
+
+# =====================================================
+# 3. Install Web Server
+# =====================================================
+
+# Install Apache
+
+sudo apt install apache2 -y
+
+
+# Install Nginx (alternative)
+
+sudo apt install nginx -y
+
+
+
+# =====================================================
+# 4. Configure HTTPS Service
+# =====================================================
+
+# Enable Apache SSL module
+
+sudo a2enmod ssl
+
+
+# Restart Apache
+
+sudo systemctl restart apache2
+
+
+
+# Check HTTPS port
+
+sudo ss -tulnp | grep 443
+
+
+
+# =====================================================
+# 5. Install SSH Server
+# =====================================================
 
 sudo apt install openssh-server -y
 
 
 
-# --------------------------------------------------
-# Enable SSH Service
-#
-# Purpose:
-# Start SSH automatically after reboot.
-# --------------------------------------------------
+# Enable SSH service
 
 sudo systemctl enable ssh
 
@@ -56,12 +96,15 @@ sudo systemctl start ssh
 
 
 
-# --------------------------------------------------
-# Disable Telnet Service
-#
-# Purpose:
-# Remove insecure plaintext remote access.
-# --------------------------------------------------
+# Check SSH status
+
+sudo systemctl status ssh
+
+
+
+# =====================================================
+# 6. Disable Telnet Service
+# =====================================================
 
 sudo systemctl stop telnet
 
@@ -69,48 +112,36 @@ sudo systemctl disable telnet
 
 
 
-# --------------------------------------------------
-# Check SSH Status
-#
-# Purpose:
-# Verify secure remote access service.
-# --------------------------------------------------
+# =====================================================
+# 7. Verify Secure Communication
+# =====================================================
 
-sudo systemctl status ssh
-
-
-
-# --------------------------------------------------
-# Check Listening Ports
-#
-# Purpose:
-# Verify HTTPS and SSH services.
-# --------------------------------------------------
+# Check listening services
 
 sudo ss -tulnp
 
 
 
-# --------------------------------------------------
-# Test HTTPS Connection
-#
-# Purpose:
-# Verify TLS communication.
-# --------------------------------------------------
+# Test HTTPS connection
 
 curl -k https://localhost
 
 
 
-# --------------------------------------------------
-# Verify Certificate Information
-#
-# Purpose:
-# Inspect SSL certificate details.
-# --------------------------------------------------
+# Test SSH connection
 
-openssl x509 -in server.crt -text -noout
+ssh username@server-ip
 
 
 
-echo "Data Protection Configuration Completed"
+# =====================================================
+# 8. Network Traffic Analysis
+# =====================================================
+
+# Capture HTTPS traffic using Wireshark CLI
+
+sudo tcpdump -i any port 443
+
+
+
+echo "Data Protection Lab Commands Completed"
