@@ -288,42 +288,6 @@ After completing this lab:
 
 ---
 
-# Screenshots
-
-Add screenshots of:
-
-1. Open ports before firewall configuration
-
-```
-screenshots/open_ports_before.png
-```
-
-2. Running services
-
-```
-screenshots/services_running.png
-```
-
-3. Firewall enabled
-
-```
-screenshots/firewall_enabled.png
-```
-
-4. Port 23 blocked
-
-```
-screenshots/port23_blocked.png
-```
-
-5. Open ports after changes
-
-```
-screenshots/open_ports_after.png
-```
-
----
-
 # Conclusion
 
 This lab provided practical experience in Linux network security by identifying exposed ports, analyzing running services, and configuring firewall rules.
@@ -335,5 +299,3 @@ Proper port management helps prevent unauthorized access and reduces possible at
 # Author
 
 **Umer Ali**
-
-Cybersecurity / Cloud Security Lab Portfolio
