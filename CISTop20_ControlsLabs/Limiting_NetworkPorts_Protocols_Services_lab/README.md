@@ -1,4 +1,4 @@
-# Lab 01: Limiting Network Ports, Protocols & Services
+# Lab 03: Limiting Network Ports, Protocols & Services
 
 ## Lab Overview
 
