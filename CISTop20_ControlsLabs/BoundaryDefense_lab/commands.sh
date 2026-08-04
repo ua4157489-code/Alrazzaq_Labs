@@ -1,76 +1,150 @@
 #!/bin/bash
 
-# ==========================================
+# ==================================================
 # Lab 06: Boundary Defense
-# Firewall Configuration and Testing
-# ==========================================
+# Firewall Configuration and Security Testing
+# ==================================================
 
 
-echo "Starting Boundary Defense Firewall Configuration"
+echo "=============================================="
+echo " Boundary Defense Firewall Configuration"
+echo "=============================================="
 
 
-# Check current firewall status
+# --------------------------------------------------
+# Step 1: Check Current Firewall Status
+# Purpose:
+# Display current UFW firewall state, policies,
+# and existing allow/deny rules.
+# --------------------------------------------------
+
+echo "[+] Checking current firewall status..."
 
 sudo ufw status verbose
 
 
-# Enable UFW firewall
+
+# --------------------------------------------------
+# Step 2: Enable Firewall Protection
+# Purpose:
+# Activate UFW firewall to start enforcing
+# network security rules.
+# --------------------------------------------------
+
+echo "[+] Enabling firewall..."
 
 sudo ufw enable
 
 
-# Configure default firewall policies
 
-# Block all incoming traffic by default
+# --------------------------------------------------
+# Step 3: Configure Default Incoming Policy
+# Purpose:
+# Block all incoming connections by default.
+# This follows a deny-by-default security model.
+# --------------------------------------------------
+
+echo "[+] Setting default incoming policy to deny..."
 
 sudo ufw default deny incoming
 
 
-# Allow outgoing connections
+
+# --------------------------------------------------
+# Step 4: Configure Default Outgoing Policy
+# Purpose:
+# Allow internal systems to initiate outbound
+# connections required for normal operation.
+# --------------------------------------------------
+
+echo "[+] Setting default outgoing policy to allow..."
 
 sudo ufw default allow outgoing
 
 
 
-# Allow required services
+# --------------------------------------------------
+# Step 5: Allow SSH Access
+# Purpose:
+# Permit secure remote administration through SSH.
+# Port 22 is used by SSH protocol.
+# --------------------------------------------------
 
-# Allow SSH access
+echo "[+] Allowing SSH traffic..."
 
 sudo ufw allow 22/tcp
 
 
-# Allow HTTPS traffic
+
+# --------------------------------------------------
+# Step 6: Allow HTTPS Traffic
+# Purpose:
+# Allow secure web communication.
+# HTTPS uses TCP port 443.
+# --------------------------------------------------
+
+echo "[+] Allowing HTTPS traffic..."
 
 sudo ufw allow 443/tcp
 
 
 
-# Block unused port example
+# --------------------------------------------------
+# Step 7: Block Unnecessary Port
+# Purpose:
+# Reduce attack surface by blocking unused
+# services and ports.
+#
+# Example:
+# Port 8080 is blocked.
+# --------------------------------------------------
 
-# Blocking port 8080
+echo "[+] Blocking unused port 8080..."
 
 sudo ufw deny 8080
 
 
 
-# Display firewall rules
+# --------------------------------------------------
+# Step 8: Display Firewall Rules
+# Purpose:
+# Review configured firewall rules with numbers
+# for easier management.
+# --------------------------------------------------
+
+echo "[+] Displaying firewall rules..."
 
 sudo ufw status numbered
 
 
 
-# Reload firewall configuration
+# --------------------------------------------------
+# Step 9: Reload Firewall
+# Purpose:
+# Apply updated firewall configuration.
+# --------------------------------------------------
+
+echo "[+] Reloading firewall rules..."
 
 sudo ufw reload
 
 
 
-# Test blocked port
+# --------------------------------------------------
+# Step 10: Test Blocked Port
+# Purpose:
+# Validate that unauthorized access attempts
+# are blocked by the firewall.
+#
+# Replace <external-ip-address> with target IP.
+# --------------------------------------------------
 
-# Replace IP with external firewall IP
+echo "[+] Testing blocked port..."
 
 nc -vz <external-ip-address> 8080
 
 
 
-echo "Firewall boundary defense configuration completed"
+echo "=============================================="
+echo " Firewall Boundary Defense Completed"
+echo "=============================================="
