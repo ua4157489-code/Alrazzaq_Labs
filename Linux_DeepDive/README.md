@@ -1,7 +1,6 @@
 <div align="center">
 
-# 🐧 Linux Deep Dive
-### *A 60-Lab Journey from Terminal Zero to Sysadmin Hero*
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:06b6d4,50:6366f1,100:a855f7&height=180&section=header&text=Linux%20Deep%20Dive&fontSize=55&fontColor=ffffff&fontAlignY=40&animation=fadeIn&desc=A%2060-Lab%20Journey%20from%20Terminal%20Zero%20to%20Sysadmin%20Hero&descAlignY=62&descSize=17&descColor=e0e7ff" width="100%"/>
 
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge&logo=checkmarx)
 ![Labs](https://img.shields.io/badge/Labs-60%2F60-blue?style=for-the-badge&logo=linux)
@@ -190,7 +189,7 @@ This repo documents my complete hands-on journey through the **Linux Deep Dive**
 ```diff
 + 60/60 Labs Completed
 + Status: PASSED ✅
-+ Track: DCCS Basic Labs 2025
++ Track: DCCS Basic Labs 2026
 + Provider: Alnafi LMS
 ```
 
