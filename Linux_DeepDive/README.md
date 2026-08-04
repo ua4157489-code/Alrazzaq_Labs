@@ -7,15 +7,6 @@
 ![Platform](https://img.shields.io/badge/Platform-Alnafi_LMS-orange?style=for-the-badge)
 ![Shell](https://img.shields.io/badge/Shell-Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
 
-```
- _     _                  ____                  ____  _
-| |   (_)_ __  _   ___  _|  _ \  ___  ___ _ __  |  _ \(_)_   _____
-| |   | | '_ \| | | \ \/ / | | |/ _ \/ _ \ '_ \ | | | | \ \ / / _ \
-| |___| | | | | |_| |>  <| |_| |  __/  __/ |_) || |_| | |\ V /  __/
-|_____|_|_| |_|\__,_/_/\_\____/ \___|\___| .__(_)____/|_| \_/ \___|
-                                          |_|
-```
-
 **Progress:** `[██████████████████████████████████████████████████] 100%`
 
 </div>
