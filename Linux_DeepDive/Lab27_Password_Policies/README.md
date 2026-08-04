@@ -1,4 +1,96 @@
-# Linux Deep Dive Labs
+# 🔐 Lab 27: Password Policies
+
+> **This lab demonstrates practical Linux system administration techniques for configuring secure password policies, enforcing password aging, and strengthening user authentication using native Linux security utilities.**
+
+---
+
+# 📖 Overview
+
+Password policies are a critical component of Linux system security. They help protect user accounts by enforcing password expiration, minimum password length, and secure authentication practices. Proper password management reduces the risk of unauthorized access and improves compliance with security standards.
+
+This lab demonstrates how to inspect password policies, configure password expiration settings, and strengthen password complexity using native Linux tools and configuration files.
+
+---
+
+# 🎯 Objectives
+
+- Understand Linux password policies
+- View current password aging settings
+- Configure password expiration
+- Configure password warning periods
+- Strengthen password complexity
+- Learn Linux authentication best practices
+
+---
+
+# 🛠 Technologies Used
+
+- Linux Terminal
+- chage
+- nano
+- PAM (Pluggable Authentication Modules)
+- /etc/login.defs
+- pam_pwquality
+
+---
+
+# 📚 Commands Covered
+
+| Command | Purpose |
+|----------|----------|
+| `chage -l` | Display password aging information |
+| `chage -M` | Set maximum password age |
+| `chage -W` | Configure password expiry warning |
+| `nano` | Edit password policy configuration |
+| `cat` | Verify configuration files |
+
+---
+
+# 🔐 Skills Learned
+
+- Linux Password Policies
+- Password Aging
+- Authentication Management
+- PAM Configuration
+- Linux Security Hardening
+- User Account Security
+
+---
+
+# 📁 Repository Structure
+
+```
+Lab27_Password_Policies/
+├── README.md
+├── commands.sh
+├── notes.sh
+├── checklist.md
+└── security_report.md
+```
+
+---
+
+# 🎓 Learning Outcome
+
+After completing this lab, I can confidently:
+
+- Inspect password aging policies
+- Configure password expiration
+- Set password warning periods
+- Understand password complexity enforcement
+- Improve Linux account security
+
+---
+
+# 📌 Difficulty Level
+
+**High**
+
+---
+
+# ✅ Lab Status
+
+**Completed Successfully**# Linux Deep Dive Labs
 
 ![Linux](https://img.shields.io/badge/Linux-Ubuntu-E95420?logo=ubuntu)
 ![Shell](https://img.shields.io/badge/Shell-Bash-4EAA25?logo=gnu-bash)
