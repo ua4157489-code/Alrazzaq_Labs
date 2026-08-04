@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:7f1d1d,100:000000&height=180&section=header&text=Security%20%26%20Compliance&fontSize=50&fontColor=39ff14&fontAlignY=38&animation=fadeIn&desc=Threat%20Hunting%20%E2%80%A2%20Observability%20%E2%80%A2%20CIS%20Top%2020%20Controls&descAlignY=62&descSize=16&descColor=e5e7eb" width="100%"/>
-
 ![Elasticsearch](https://img.shields.io/badge/Elasticsearch_Threat_Hunting-Completed-brightgreen?style=for-the-badge&logo=elastic&logoColor=white)
 ![CIS Controls](https://img.shields.io/badge/CIS_Top_20_Controls-In_Progress-yellow?style=for-the-badge&logo=shieldsdotio&logoColor=white)
 ![Labs](https://img.shields.io/badge/CIS_Labs-15%2F30-critical?style=for-the-badge&logo=checkmarx)
