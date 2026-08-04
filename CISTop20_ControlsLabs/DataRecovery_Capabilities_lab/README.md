@@ -1,4 +1,4 @@
-# Lab 10: Data Recovery Capabilities
+# Lab 04: Data Recovery Capabilities
 
 ## Lab Overview
 
