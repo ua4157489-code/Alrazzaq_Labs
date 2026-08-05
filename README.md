@@ -289,7 +289,6 @@ Alrazzaq_Labs/
 
 <br/><br/>
 
-**🧊 3D
 **🟩 Yearly Contribution Heatmap**
 
 <img src="https://ghchart.rshah.org/00E0FF/ua4157489-code" width="100%"/>
