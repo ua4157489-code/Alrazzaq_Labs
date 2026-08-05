@@ -289,12 +289,7 @@ Alrazzaq_Labs/
 
 <br/><br/>
 
-**🧊 3D Contribution Calendar**
-
-<img src="https://github-profile-3d-contrib.vercel.app/?username=ua4157489-code&theme=nord_dark" width="100%"/>
-
-<br/><br/>
-
+**🧊 3D
 **🟩 Yearly Contribution Heatmap**
 
 <img src="https://ghchart.rshah.org/00E0FF/ua4157489-code" width="100%"/>
