@@ -175,12 +175,6 @@ progress = {
 
 <img src="https://capsule-render.vercel.app/api?type=transparent&color=39ff14&height=2&width=100%"/>
 
-## 🧊 3D Contribution Grid
-
-<div align="center">
-<img src="https://github-profile-3d-contrib.vercel.app/?username=ua4157489-code&theme=green_theme" width="100%"/>
-</div>
-
 ## 📈 Live Stats
 
 <div align="center">
